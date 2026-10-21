@@ -1,0 +1,18 @@
+id,object,category,color,location,time,status,category_code,location_code,pattern_cluster
+1,Bag,Bag,Black,College,10AM,Lost,0,0,1
+2,Wallet,Wallet,Brown,Mall,2PM,Found,1,1,1
+3,Mobile,Mobile,Black,College,11AM,Lost,2,0,1
+4,Keys,Keys,Silver,Bus Stand,6PM,Lost,3,2,1
+5,Bag,Bag,Blue,College,1PM,Lost,0,0,1
+6,Mobile,Mobile,Black,Mall,4PM,Found,2,1,1
+7,Wallet,Wallet,Black,College,3PM,Lost,1,0,1
+8,Bag,Bag,Black,College,5PM,Lost,0,0,1
+9,Keys,Keys,Silver,Mall,7PM,Found,3,1,1
+10,Mobile,Mobile,Blue,College,12PM,Lost,2,0,1
+11,mobile,Wallet,black,college,12:30,Lost,1,3,1
+12,laptop,Electronics,green,mall,12:30,Found,4,4,2
+13,laptop,Electronics,green,mall,12:30,Lost,4,4,2
+14,bike key,Keys,black,school,03:30,Lost,3,5,2
+15,wallet,Wallet,brown,hotel,01:45,Found,1,6,2
+16,chain,Other,silver,bank,10:35,Found,5,7,2
+17,chain,Other,silver,bank,10:30,Lost,5,7,2

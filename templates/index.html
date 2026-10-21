@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Smart Lost & Found Analyzer</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+<section class="analyzer-section">
+    <h2>Lost & Found Object Analyzer</h2>
+    <p>Enter object details to analyze patterns and find possible matches.</p>
+
+    <form action="/analyze" method="POST">
+
+        <label>Object Name</label>
+        <input type="text" name="object" placeholder="Example: Mobile" required>
+
+        <label>Category</label>
+        <select name="category" required>
+            <option value="">Select Category</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Bags">Bags</option>
+            <option value="Wallet">Wallet</option>
+            <option value="Keys">Keys</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label>Color</label>
+        <input type="text" name="color" placeholder="Example: Black" required>
+
+        <label>Location</label>
+        <input type="text" name="location" placeholder="Example: College" required>
+
+        <label>Time</label>
+        <input type="time" name="time" required>
+
+        <label>Status</label>
+        <select name="status" required>
+            <option value="">Select Status</option>
+            <option value="Lost">Lost</option>
+            <option value="Found">Found</option>
+        </select>
+
+        <button type="submit">Analyze Object</button>
+
+    </form>
+</section>
+
+<div class="page">
+
+    <!-- Header -->
+
+    <header class="header">
+
+        <div>
+            <div class="tag">AI / ML SYSTEM</div>
+
+            <h1>Smart Lost & Found</h1>
+
+            <p>
+                Object Pattern Analyzer
+            </p>
+        </div>
+
+        <div class="status">
+            <span></span>
+            ANALYSIS ACTIVE
+        </div>
+
+    </header>
+
+
+    <!-- Main Summary -->
+
+    <section class="summary">
+
+        <div class="main-card">
+
+            <div class="small-title">
+                TOTAL OBJECT RECORDS
+            </div>
+
+            <div class="big-number">
+                {{ total_objects }}
+            </div>
+
+            <div class="description">
+                Objects analyzed from the dataset
+            </div>
+
+        </div>
+
+
+        <div class="mini-card lost">
+
+            <div class="icon">L</div>
+
+            <div>
+                <div class="small-title">
+                    LOST OBJECTS
+                </div>
+
+                <div class="number">
+                    {{ lost_count }}
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="mini-card found">
+
+            <div class="icon">F</div>
+
+            <div>
+                <div class="small-title">
+                    FOUND OBJECTS
+                </div>
+
+                <div class="number">
+                    {{ found_count }}
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Analysis -->
+
+    <section class="analysis-grid">
+
+        <div class="panel">
+
+            <div class="panel-header">
+
+                <span>01</span>
+
+                <h2>Object Pattern</h2>
+
+            </div>
+
+            <div class="focus">
+
+                <div class="label">
+                    MOST COMMON OBJECT
+                </div>
+
+                <div class="value">
+                    {{ most_common_object }}
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="panel">
+
+            <div class="panel-header">
+
+                <span>02</span>
+
+                <h2>Location Pattern</h2>
+
+            </div>
+
+            <div class="focus">
+
+                <div class="label">
+                    MOST COMMON LOCATION
+                </div>
+
+                <div class="value">
+                    {{ most_common_location }}
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="panel ml-panel">
+
+            <div class="panel-header">
+
+                <span>03</span>
+
+                <h2>ML Pattern Cluster</h2>
+
+            </div>
+
+            <div class="cluster">
+
+                <div class="cluster-number">
+                    {{ most_common_cluster }}
+                </div>
+
+                <div>
+                    <div class="label">
+                        DOMINANT CLUSTER
+                    </div>
+
+                    <p>
+                        Similar object patterns detected
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- System Explanation -->
+
+    <section class="system">
+
+        <div class="system-title">
+
+            <div class="tag">
+                SYSTEM OVERVIEW
+            </div>
+
+            <h2>
+                How the Analyzer Works
+            </h2>
+
+        </div>
+
+
+        <div class="steps">
+
+            <div class="step">
+
+                <strong>01</strong>
+
+                <h3>Collect</h3>
+
+                <p>
+                    Lost and found object records are
+                    collected from the dataset.
+                </p>
+
+            </div>
+
+
+            <div class="line"></div>
+
+
+            <div class="step">
+
+                <strong>02</strong>
+
+                <h3>Analyze</h3>
+
+                <p>
+                    Object categories and locations are
+                    analyzed to identify patterns.
+                </p>
+
+            </div>
+
+
+            <div class="line"></div>
+
+
+            <div class="step">
+
+                <strong>03</strong>
+
+                <h3>Cluster</h3>
+
+                <p>
+                    Machine Learning groups similar
+                    object patterns into clusters.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div>
+            SMART LOST & FOUND OBJECT PATTERN ANALYZER
+        </div>
+
+        <span>
+            AI / ML PROJECT
+        </span>
+
+    </footer>
+
+</div>
+
+</body>
+</html>

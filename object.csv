@@ -1,0 +1,18 @@
+id,object,category,color,location,time,status
+1,Bag,Bag,Black,College,10AM,Lost
+2,Wallet,Wallet,Brown,Mall,2PM,Found
+3,Mobile,Mobile,Black,College,11AM,Lost
+4,Keys,Keys,Silver,Bus Stand,6PM,Lost
+5,Bag,Bag,Blue,College,1PM,Lost
+6,Mobile,Mobile,Black,Mall,4PM,Found
+7,Wallet,Wallet,Black,College,3PM,Lost
+8,Bag,Bag,Black,College,5PM,Lost
+9,Keys,Keys,Silver,Mall,7PM,Found
+10,Mobile,Mobile,Blue,College,12PM,Lost
+11,mobile,Wallet,black,college,12:30,Lost
+12,laptop,Electronics,green,mall,12:30,Found
+13,laptop,Electronics,green,mall,12:30,Lost
+14,bike key,Keys,black,school,03:30,Lost
+15,wallet,Wallet,brown,hotel,01:45,Found
+16,chain,Other,silver,bank,10:35,Found
+17,chain,Other,silver,bank,10:30,Lost
